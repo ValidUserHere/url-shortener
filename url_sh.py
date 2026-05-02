@@ -8,7 +8,7 @@ import redis
 
 app = FastAPI()
 
-rd = redis.Redis(host="redis", port=6379, decode_responses=True)  # memo storage
+rd = redis.Redis(host="localhost", port=6379, decode_responses=True)  # memo storage
 
 def generate_code():
     return ''.join(random.choices(string.ascii_letters + string.digits, k = 6)) #formatting the link using random
